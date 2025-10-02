@@ -1,0 +1,29 @@
+{
+  "name": "vivaswana",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "watch:css": "tailwindcss -i ./src/input.css -o ./css/output.css --watch",
+    "cp:js": "cp ./node_modules/preline/dist/preline.js ./js/preline.js",
+
+    
+    "build:css": "tailwindcss -i ./src/input.css -o ./dist/vivasvana/css/output.css --minify",
+    "build:js": "cp ./node_modules/preline/dist/preline.js ./dist/vivasvana/js/preline.js",
+    "build:html": "cp ./index.html ./dist/vivasvana/index.html",
+    "build:assets": "cp -r ./images/* ./dist/vivasvana/images",
+    "rm:dist": "rm -rf ./dist && mkdir dist && mkdir dist/vivasvana && mkdir dist/vivasvana/css && mkdir dist/vivasvana/js && mkdir dist/vivasvana/images",
+    "build": "npm run rm:dist && npm run build:assets && npm run build:css && npm run build:js && npm run build:html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "preline": "^3.2.3",
+    "tailwindcss": "^4.1.13"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.13"
+  }
+}

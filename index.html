@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>The Vivasvana — Pure, Plant-Powered Nutrition</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Poppins:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind Play CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="./css/output.css">
+    <!-- 
+    <style>
+        @theme {
+            fontFamily: {
+                heading: ['Poppins', 'sans-serif'],
+                    body: ['Merriweather', 'serif']
+            }
+        }
+    </style> -->
+
+    <!-- Alpine.js -->
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <!-- Preline (components & JS) -->
+    <script defer src="./js/preline.js"></script>
+
+
+    <meta name="description"
+        content="Vivasvana — preservative-free plant-powered nutrition powders, made ethically by village communities.">
+
+    <meta property="og:title" content="The Rock" />
+    <meta property="og:type" content="video.movie" />
+    <meta property="og:url" content="https://www.imdb.com/title/tt0117500/" />
+    <meta property="og:image" content="https://ia.media-imdb.com/images/rock.jpg" />
+
+    <style>
+        :root {
+            --green: #2F855A;
+            /* medium green */
+            --khaki: #C9B38A;
+            --clay: #B77952;
+            /* clay brown */
+            --orange: #F97316;
+            --redorange: #FF5722;
+            --sunset: #FFD54F;
+            /* sunset yellow */
+            --leaf: #81C784;
+            --muted: #6B7280;
+            /* gray for fonts */
+            --black: #0F172A;
+            --white: #FFFFFF;
+            --yellow: #fdb209;
+
+        }
+
+        /* small utility for smooth anchor scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* subtle body background */
+        body {
+            background: linear-gradient(180deg, rgba(255, 250, 245, 0.6), #fff);
+        }
+
+        /* Keep hero text readable on top of images */
+        .hero-overlay {
+            background: linear-gradient(90deg, rgba(15, 23, 42, 0.5), rgba(255, 255, 255, 0.02));
+        }
+    </style>
+</head>
+
+<body class="text-[16px] text-[var(--black)] font-body leading-relaxed" x-data="{ open: false }">
+
+    <!-- HEADER / NAV -->
+    <header x-data="{ open:false }" class="sticky top-0 z-40 bg-white/80 backdrop-blur-md border-b border-gray-100">
+        <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+            <a href="#home" class="flex items-center gap-3">
+                <div
+                    class="w-24 h-24 rounded-full bg-[var(--leaf)] flex items-center justify-center text-white font-bold">
+                    <img src="./images/logo.jpeg" alt="natural powders" class="w-24 h-24 object-cover " />
+                </div>
+                <div>
+                    <h1 class="text-lg font-heading">The Vivasvana</h1>
+                    <p class="text-xs text-[var(--muted)] -mt-1">Pure · Plant · Community</p>
+                </div>
+            </a>
+
+            <nav class="hidden md:flex items-center gap-6 text-sm">
+                <a href="#about" class="hover:text-[var(--green)]">About</a>
+                <a href="#vision" class="hover:text-[var(--green)]">Vision</a>
+                <a href="#mission" class="hover:text-[var(--green)]">Mission</a>
+                <a href="#products"
+                    class="px-4 py-2 rounded-md border border-gray-200 bg-[var(--green)] text-white hover:opacity-95">Shop</a>
+            </nav>
+
+            <div class="md:hidden">
+                <button @click="open = !open" class="p-2 rounded-md border">
+                    <svg x-show="!open" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                    <svg x-show="open" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div x-show="open" x-transition class="md:hidden border-t border-gray-100 bg-white">
+            <div class="px-4 py-4 flex flex-col gap-3">
+                <a href="#about" @click="open=false" class="py-2">About</a>
+                <a href="#vision" @click="open=false" class="py-2">Vision</a>
+                <a href="#mission" @click="open=false" class="py-2">Mission</a>
+                <a href="#products" @click="open=false"
+                    class="py-2 text-white bg-[var(--green)] rounded-md text-center">Shop</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <main id="home">
+        <section class="relative overflow-hidden" style="background: #f4fcff;">
+            <div class="container mx-auto px-4 py-16 md:py-28 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+
+                <div class="z-10">
+                    <p class="text-sm uppercase tracking-wide font-semibold text-[var(--clay)]">Natural · Vegan ·
+                        Gluten-Free</p>
+                    <h2 class="mt-4 text-4xl md:text-5xl font-heading font-extrabold leading-tight">Pure nutrition,
+                        crafted by communities — for everyday vitality.</h2>
+                    <p class="mt-4 text-gray-600 max-w-xl">No preservatives, no fillers — just plant-powered,
+                        science-backed formulas made in hygienic village facilities that empower local producers.</p>
+
+                    <div class="mt-6 flex gap-3">
+                        <a href="#products"
+                            class="inline-flex items-center gap-2 px-5 py-3 rounded-md bg-[var(--orange)] text-white font-semibold shadow">Shop
+                            Products
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                            </svg>
+                        </a>
+                        <a href="#about"
+                            class="inline-flex items-center gap-2 px-5 py-3 rounded-md border border-gray-200 text-[var(--green)] font-semibold">Our
+                            Story</a>
+                    </div>
+
+                    <div class="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-3 text-sm text-gray-600">
+                        <div class="flex flex-col items-start">
+                            <span class="font-semibold text-[var(--green)]">Vegan</span>
+                            <small>Certified</small>
+                        </div>
+                        <div class="flex flex-col items-start">
+                            <span class="font-semibold text-[var(--green)]">Gluten-Free</span>
+                            <small>Lab tested</small>
+                        </div>
+                        <div class="flex flex-col items-start">
+                            <span class="font-semibold text-[var(--green)]">No Preservatives</span>
+                            <small>Pure</small>
+                        </div>
+                        <div class="flex flex-col items-start">
+                            <span class="font-semibold text-[var(--clay)]">Community</span>
+                            <small>Empowered</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <div class="hero-overlay rounded-xl p-6">
+                        <img src="./images/product1.jpeg" alt="natural powders"
+                            class="w-full rounded-xl shadow-lg object-cover h-96 md:h-[28rem]" />
+                    </div>
+
+                    <div class="absolute -bottom-6 left-6 bg-white rounded-lg shadow-lg p-4 flex gap-4 items-center">
+                        <img src="./images/logo.jpeg" alt="producer"
+                            class="w-12 h-12 rounded-full object-cover border" />
+                        <div>
+                            <p class="text-sm font-semibold">crafted by skilled village communities</p>
+                            <p class="text-xs text-gray-500">Hygienic small-batch production</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section id="about" class="container mx-auto px-4 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <h3 class="text-3xl font-heading font-bold">About The Vivasvana</h3>
+                    <p class="mt-4 text-gray-700">The Vivasvana was born as a return to clean, honest, and effective
+                        nutrition. Derived from the Sanskrit word "Vivaswan" — the bringer of light and life — our
+                        purpose is to deliver pure, natural nutrition powders that integrate into modern lives without
+                        compromising health or sustainability.</p>
+
+                    <ul class="mt-6 space-y-3">
+                        <li class="flex items-start gap-3">
+                            <div
+                                class="mt-1 w-8 h-8 rounded-full bg-[var(--green)] text-white flex items-center justify-center font-semibold">
+                                1</div>
+                            <div>
+                                <p class="font-semibold">Plant-powered ingredients</p>
+                                <p class="text-sm text-gray-600">Clinically-researched + traditional wisdom.</p>
+                            </div>
+                        </li>
+
+                        <li class="flex items-start gap-3">
+                            <div
+                                class="mt-1 w-8 h-8 rounded-full bg-[var(--khaki)] text-white flex items-center justify-center font-semibold">
+                                2</div>
+                            <div>
+                                <p class="font-semibold">Community-crafted</p>
+                                <p class="text-sm text-gray-600">Made by skilled village groups in hygienic
+                                    small-batches.</p>
+                            </div>
+                        </li>
+
+                        <li class="flex items-start gap-3">
+                            <div
+                                class="mt-1 w-8 h-8 rounded-full bg-[var(--clay)] text-white flex items-center justify-center font-semibold">
+                                3</div>
+                            <div>
+                                <p class="font-semibold">No fillers or preservatives</p>
+                                <p class="text-sm text-gray-600">Short, transparent ingredient lists you can trust.</p>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div class="mt-6">
+                        <a href="#mission"
+                            class="inline-flex items-center gap-2 px-4 py-2 rounded-md border border-gray-200">Read Our
+                            Mission</a>
+                    </div>
+                </div>
+
+                <div class="rounded-lg overflow-hidden shadow-lg">
+                    <div class="grid grid-cols-1 gap-0 sm:grid-cols-1">
+                        <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=800&q=60"
+                            alt="ingredients" class="w-full h-48 object-cover" />
+                        <!-- <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=60"
+                            alt="mixing" class="w-full h-48 object-cover" x-show="open" /> -->
+                    </div>
+                    <div class="p-6 bg-white">
+                        <h4 class="font-semibold">Tradition meets science</h4>
+                        <p class="mt-2 text-sm text-gray-600">We combine indigenous knowledge with modern formulation
+                            practices to build products that are both effective and delicious.</p>
+                        <div class="mt-4 flex gap-3">
+                            <span class="px-3 py-1 rounded-full text-xs border">Vegan</span>
+                            <span class="px-3 py-1 rounded-full text-xs border">Gluten-Free</span>
+                            <span class="px-3 py-1 rounded-full text-xs border">FSSAI</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- VISION -->
+        <section id="vision" class="bg-[var(--yellow)]/30 py-14">
+            <div class="container mx-auto px-4">
+                <div class="max-w-3xl mx-auto text-center">
+                    <h3 class="text-3xl font-heading font-bold">Vision</h3>
+                    <p class="mt-4 text-gray-700">To become a globally respected wellness brand that delivers
+                        preservative-free, naturally crafted nutrition while empowering rural communities and setting
+                        standards for purity, transparency, and ethical production.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- MISSION -->
+        <section id="mission" class="py-14">
+            <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <h3 class="text-3xl font-heading font-bold">Mission</h3>
+                    <p class="mt-4 text-gray-700">To offer natural, preservative-free nutrition powders—formulated with
+                        traditional wisdom and modern science. To empower village-based producer groups through fair,
+                        hygienic, and small-batch manufacturing and to uphold the highest standards of clean-label
+                        transparency and ethical sourcing.</p>
+
+                    <ol class="mt-6 space-y-3 text-sm text-gray-600">
+                        <li>• Clean, transparent formulas with short ingredient lists.</li>
+                        <li>• Responsible sourcing and fair partnerships.</li>
+                        <li>• Community livelihoods through sustainable production.</li>
+                    </ol>
+                </div>
+
+                <div class="bg-white rounded-xl shadow p-6">
+                    <h4 class="font-semibold">Core Values</h4>
+                    <ul class="mt-4 space-y-3 text-sm text-gray-700">
+                        <li class="flex items-start gap-3"><span
+                                class="font-semibold text-[var(--green)]">Purity:</span> No chemicals, no fillers, no
+                            preservatives.</li>
+                        <li class="flex items-start gap-3"><span
+                                class="font-semibold text-[var(--clay)]">Community:</span> Village-led production &
+                            livelihoods.</li>
+                        <li class="flex items-start gap-3"><span
+                                class="font-semibold text-[var(--orange)]">Transparency:</span> Traceable sourcing &
+                            clear labels.</li>
+                    </ul>
+
+                    <div class="mt-6">
+                        <a href="#products"
+                            class="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-[var(--green)] text-white">View
+                            Products</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRODUCTS (placeholder for one-page) -->
+        <section id="products" class="py-14 bg-white"  x-show="open">
+            <div class="container mx-auto px-4">
+                <div class="flex items-center justify-between">
+                    <h3 class="text-2xl font-heading font-bold">Featured Products</h3>
+                    <p class="text-sm text-gray-500">Small-batch. Clean labels.</p>
+                </div>
+
+                <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                    <!-- Product card 1 -->
+                    <article class="border rounded-lg overflow-hidden shadow-sm">
+                        <img src="./images/product1.jpeg" alt="product 1" class="w-full h-44 object-cover" />
+                        <div class="p-4">
+                            <h4 class="font-semibold">Protein Greens Mix</h4>
+                            <p class="text-sm text-gray-600 mt-2">Plant-based protein with moringa, pea protein, and
+                                natural flavor—smooth mixing, no grit.</p>
+                            <div class="mt-4 flex items-center justify-between">
+                                <div>
+                                    <span class="text-lg font-bold">₹499</span>
+                                    <p class="text-xs text-gray-500">(200g)</p>
+                                </div>
+                                <div class="flex gap-2">
+                                    <button class="px-3 py-1 rounded-md bg-[var(--orange)] text-white">Add</button>
+                                    <button class="px-3 py-1 rounded-md border">Details</button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Product card 2 -->
+                    <article class="border rounded-lg overflow-hidden shadow-sm">
+                        <img src="./images/product1.jpeg" alt="product 2" class="w-full h-44 object-cover" />
+                        <div class="p-4">
+                            <h4 class="font-semibold">Daily Herbal Blend</h4>
+                            <p class="text-sm text-gray-600 mt-2">Gentle adaptogens and herbs for daily focus and
+                                stamina.</p>
+                            <div class="mt-4 flex items-center justify-between">
+                                <div>
+                                    <span class="text-lg font-bold">₹399</span>
+                                    <p class="text-xs text-gray-500">(150g)</p>
+                                </div>
+                                <div class="flex gap-2">
+                                    <button class="px-3 py-1 rounded-md bg-[var(--redorange)] text-white">Add</button>
+                                    <button class="px-3 py-1 rounded-md border">Details</button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Product card 3 -->
+                    <article class="border rounded-lg overflow-hidden shadow-sm">
+                        <img src="./images/product1.jpeg" alt="product 3" class="w-full h-44 object-cover" />
+                        <div class="p-4">
+                            <h4 class="font-semibold">Morning Energizer</h4>
+                            <p class="text-sm text-gray-600 mt-2">Bright citrus and natural greens for a refreshing
+                                start.</p>
+                            <div class="mt-4 flex items-center justify-between">
+                                <div>
+                                    <span class="text-lg font-bold">₹449</span>
+                                    <p class="text-xs text-gray-500">(180g)</p>
+                                </div>
+                                <div class="flex gap-2">
+                                    <button class="px-3 py-1 rounded-md bg-[var(--leaf)] text-white">Add</button>
+                                    <button class="px-3 py-1 rounded-md border">Details</button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="bg-gray-50 border-t border-gray-100 py-12">
+            <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <a href="#home" class="flex items-center gap-3">
+                        <div
+                            class="w-24 h-24 rounded-full bg-[var(--leaf)] flex items-center justify-center text-white font-bold">
+                            <img src="./images/logo.jpeg" alt="natural powders" class="w-24 h-24 object-cover " /></div>
+                        <div>
+                            <h4 class="font-heading">The Vivasvana</h4>
+                            <p class="text-sm text-gray-500">Mindful nourishment, made pure.</p>
+                        </div>
+                    </a>
+
+                    <p class="mt-4 text-sm text-gray-600">© <span x-text="new Date().getFullYear()"></span> The
+                        Vivasvana. All rights reserved.</p>
+                </div>
+
+                <div>
+                    <h5 class="font-semibold">Quick Links</h5>
+                    <ul class="mt-3 space-y-2 text-sm text-gray-600">
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#vision">Vision</a></li>
+                        <li><a href="#mission">Mission</a></li>
+                        <li><a href="#products" x-show="open">Products</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h5 class="font-semibold">Contact</h5>
+                    <p class="mt-3 text-sm text-gray-600"  x-show="open">hello@vivasvana.example</p>
+                    <p class="text-sm text-gray-600">+91 9902-230-024</p>
+
+                    <div class="mt-4 flex gap-3"  x-show="open">
+                        <a class="inline-flex items-center gap-2 px-3 py-2 rounded-md border">Instagram</a>
+                        <a class="inline-flex items-center gap-2 px-3 py-2 rounded-md border">WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <!-- Initialize Preline (for components) -->
+    <script>
+        if (window.HSStaticMethods) {
+            window.HSStaticMethods.autoInit();
+        }
+    </script>
+</body>
+
+</html>
