@@ -71,6 +71,10 @@
         .hero-overlay {
             background: linear-gradient(90deg, rgba(15, 23, 42, 0.5), rgba(255, 255, 255, 0.02));
         }
+
+        textarea {
+            resize: none;
+        }
     </style>
 </head>
 
@@ -450,7 +454,7 @@
                                         <label for="Name"
                                             class="block mb-2 text-sm text-gray-700 font-medium">Name</label>
                                         <input type="text" id="Name" name="Name" required minlength="2"
-                                            pattern="^[a-zA-Z\\s'-]+$"
+                                            pattern="^[a-zA-Z\\s'-]+$" placeholder="Enter your Name"
                                             title="Please enter a valid name (letters, spaces, hyphens, and apostrophes are allowed)."
                                             class="py-2.5 sm:py-3 px-4 block w-full border border-gray-200 rounded-lg sm:text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none">
                                     </div>
@@ -474,10 +478,11 @@
                                 <!-- End Grid -->
 
                                 <div>
-                                    <label for="Notes"
-                                        class="block mb-2 text-sm text-gray-700 font-medium">Message</label>
-                                    <textarea name="Notes" rows="4" cols="10" minlength="10" maxlength="500"
+                                    <label for="Notes" class="block mb-2 text-sm text-gray-700 font-medium">Message
+                                        (Upto 500 characters)</label>
+                                    <textarea name="Notes" rows="4" minlength="10" maxlength="500"
                                         title="Please enter a message between 10 and 500 characters."
+                                        placeholder="Enter your message"
                                         class="py-2.5 sm:py-3 px-4 block w-full border border-gray-200 rounded-lg sm:text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"></textarea>
                                 </div>
                             </div>
