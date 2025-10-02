@@ -7,8 +7,6 @@
   "scripts": {
     "watch:css": "tailwindcss -i ./src/input.css -o ./css/output.css --watch",
     "cp:js": "cp ./node_modules/preline/dist/preline.js ./js/preline.js",
-
-    
     "build:css": "tailwindcss -i ./src/input.css -o ./dist/vivasvana/css/output.css --minify",
     "build:js": "cp ./node_modules/preline/dist/preline.js ./dist/vivasvana/js/preline.js",
     "build:html": "cp ./index.html ./dist/vivasvana/index.html",
