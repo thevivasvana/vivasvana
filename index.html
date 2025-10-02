@@ -100,7 +100,7 @@
                 <a href="#vision" class="hover:text-[var(--green)]">Vision</a>
                 <a href="#mission" class="hover:text-[var(--green)]">Mission</a>
                 <a href="#products"
-                    class="px-4 py-2 rounded-md border border-gray-200 bg-[var(--green)] text-white hover:opacity-95">Shop</a>
+                    class="px-4 py-2 rounded-md border border-gray-200 bg-[var(--green)] text-white hover:opacity-95" x-show="open">Shop</a>
             </nav>
 
             <div class="md:hidden">
@@ -126,79 +126,15 @@
                 <a href="#vision" @click="open=false" class="py-2">Vision</a>
                 <a href="#mission" @click="open=false" class="py-2">Mission</a>
                 <a href="#products" @click="open=false"
-                    class="py-2 text-white bg-[var(--green)] rounded-md text-center">Shop</a>
+                    class="py-2 text-white bg-[var(--green)] rounded-md text-center" x-show="open">Shop</a>
             </div>
         </div>
     </header>
 
     <!-- HERO -->
     <main id="home">
-        <section class="relative overflow-hidden bg-(--bluebg)">
-            <div class="container mx-auto px-4 py-16 md:py-28 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
 
-                <div class="z-10">
-                    <p class="text-sm uppercase tracking-wide font-semibold text-[var(--clay)]">Natural · Vegan ·
-                        Gluten-Free</p>
-                    <h2 class="mt-4 text-4xl md:text-5xl font-heading font-extrabold leading-tight">Pure nutrition,
-                        crafted by communities — for everyday vitality.</h2>
-                    <p class="mt-4 text-gray-600 max-w-xl">No preservatives, no fillers — just plant-powered,
-                        science-backed formulas made in hygienic village facilities that empower local producers.</p>
-
-                    <div class="mt-6 flex gap-3">
-                        <a href="#products"
-                            class="inline-flex items-center gap-2 px-5 py-3 rounded-md bg-[var(--orange)] text-white font-semibold shadow">Shop
-                            Products
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                            </svg>
-                        </a>
-                        <a href="#about"
-                            class="inline-flex items-center gap-2 px-5 py-3 rounded-md border border-gray-200 text-[var(--green)] font-semibold">Our
-                            Story</a>
-                    </div>
-
-                    <div class="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-3 text-sm text-gray-600">
-                        <div class="flex flex-col items-start">
-                            <span class="font-semibold text-[var(--green)]">Vegan</span>
-                            <small>Certified</small>
-                        </div>
-                        <div class="flex flex-col items-start">
-                            <span class="font-semibold text-[var(--green)]">Gluten-Free</span>
-                            <small>Lab tested</small>
-                        </div>
-                        <div class="flex flex-col items-start">
-                            <span class="font-semibold text-[var(--green)]">No Preservatives</span>
-                            <small>Pure</small>
-                        </div>
-                        <div class="flex flex-col items-start">
-                            <span class="font-semibold text-[var(--clay)]">Community</span>
-                            <small>Empowered</small>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="relative">
-                    <div class="rounded-xl p-6">
-                        <img src="./images/product1.jpeg" alt="natural powders"
-                            class="w-full rounded-xl shadow-2xl object-cover h-96 md:h-[28rem]" />
-                    </div>
-
-                    <div class="absolute -bottom-6 left-12 bg-white rounded-lg shadow-lg p-4 flex gap-4 items-center">
-                        <img src="./images/logo.jpeg" alt="producer"
-                            class="w-12 h-12 rounded-full object-cover border" />
-                        <div>
-                            <p class="text-sm font-semibold">crafted by skilled village communities</p>
-                            <p class="text-xs text-gray-500">Hygienic small-batch production</p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- ABOUT -->
+                <!-- ABOUT -->
         <section id="about" class="container mx-auto px-4 py-16">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                 <div>
@@ -268,6 +204,75 @@
                 </div>
             </div>
         </section>
+
+
+        <!-- About Product -->
+        <section class="relative overflow-hidden bg-(--bluebg)">
+            <div class="container mx-auto px-4 py-16 md:py-28 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+
+                <div class="z-10">
+                    <p class="text-sm uppercase tracking-wide font-semibold text-[var(--clay)]">Natural · Vegan ·
+                        Gluten-Free</p>
+                    <h2 class="mt-4 text-4xl md:text-5xl font-heading font-extrabold leading-tight">Pure nutrition,
+                        crafted by communities — for everyday vitality.</h2>
+                    <p class="mt-4 text-gray-600 max-w-xl">No preservatives, no fillers — just plant-powered,
+                        science-backed formulas made in hygienic village facilities that empower local producers.</p>
+
+                    <div class="mt-6 flex gap-3">
+                        <a href="#products"
+                            class="inline-flex items-center gap-2 px-5 py-3 rounded-md bg-[var(--orange)] text-white font-semibold shadow" x-show="open">Shop
+                            Products
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                            </svg>
+                        </a>
+                        <a href="#about"
+                            class="inline-flex items-center gap-2 px-5 py-3 rounded-md border border-gray-200 text-[var(--green)] font-semibold">Our
+                            Story</a>
+                    </div>
+
+                    <div class="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-3 text-sm text-gray-600">
+                        <div class="flex flex-col items-start">
+                            <span class="font-semibold text-[var(--green)]">Vegan</span>
+                            <small>Certified</small>
+                        </div>
+                        <div class="flex flex-col items-start">
+                            <span class="font-semibold text-[var(--green)]">Gluten-Free</span>
+                            <small>Lab tested</small>
+                        </div>
+                        <div class="flex flex-col items-start">
+                            <span class="font-semibold text-[var(--green)]">No Preservatives</span>
+                            <small>Pure</small>
+                        </div>
+                        <div class="flex flex-col items-start">
+                            <span class="font-semibold text-[var(--clay)]">Community</span>
+                            <small>Empowered</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <div class="rounded-xl p-6">
+                        <img src="./images/product1.jpeg" alt="natural powders"
+                            class="w-full rounded-xl shadow-2xl object-cover h-96 md:h-[28rem]" />
+                    </div>
+
+                    <div class="absolute -bottom-6 left-12 bg-white rounded-lg shadow-lg p-4 flex gap-4 items-center">
+                        <img src="./images/logo.jpeg" alt="producer"
+                            class="w-12 h-12 rounded-full object-cover border" />
+                        <div>
+                            <p class="text-sm font-semibold">crafted by skilled village communities</p>
+                            <p class="text-xs text-gray-500">Hygienic small-batch production</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
 
         <!-- VISION -->
         <section id="vision" class="bg-[var(--yellow)] text-(--white) text-shadow-sm py-14">
