@@ -182,7 +182,8 @@
 
                     <div class="mt-6">
                         <a href="#mission"
-                            class="inline-flex items-center gap-2 px-4 py-2 rounded-md border border-gray-200 text-[var(--green)] font-semibold">Read Our
+                            class="inline-flex items-center gap-2 px-4 py-2 rounded-md border border-gray-200 text-[var(--green)] font-semibold">Read
+                            Our
                             Mission</a>
                     </div>
                 </div>
@@ -441,37 +442,42 @@
                             Fill in the form
                         </h2>
 
-                        <form id="inquiry-form" >
+                        <form id="inquiry-form">
                             <div class="grid gap-4 lg:gap-6">
                                 <!-- Grid -->
                                 <div class="grid grid-cols-1 sm:grid-cols-1 gap-4 lg:gap-6">
                                     <div>
-                                        <label for="name"
+                                        <label for="Name"
                                             class="block mb-2 text-sm text-gray-700 font-medium">Name</label>
-                                        <input type="text" name="name" id="name"
+                                        <input type="text" id="Name" name="Name" required minlength="2"
+                                            pattern="^[a-zA-Z\\s'-]+$"
+                                            title="Please enter a valid name (letters, spaces, hyphens, and apostrophes are allowed)."
                                             class="py-2.5 sm:py-3 px-4 block w-full border border-gray-200 rounded-lg sm:text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none">
                                     </div>
-                                    
+
                                 </div>
                                 <!-- End Grid -->
 
                                 <!-- Grid -->
                                 <div class="grid grid-cols-1 sm:grid-cols-1 gap-4 lg:gap-6">
-                                    
+
 
                                     <div>
-                                        <label for="phno"
-                                            class="block mb-2 text-sm text-gray-700 font-medium">Phone Number</label>
-                                        <input type="text" name="phno" id="phno"
+                                        <label for="Phone" class="block mb-2 text-sm text-gray-700 font-medium">Phone
+                                            Number</label>
+                                        <input type="tel" id="Phone" name="Phone" required pattern="[6-9][0-9]{9}"
+                                            maxlength="10" title="Please enter a valid 10-digit Indian mobile number."
+                                            placeholder="9876543210"
                                             class="py-2.5 sm:py-3 px-4 block w-full border border-gray-200 rounded-lg sm:text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none">
                                     </div>
                                 </div>
                                 <!-- End Grid -->
 
                                 <div>
-                                    <label for="message"
+                                    <label for="Notes"
                                         class="block mb-2 text-sm text-gray-700 font-medium">Message</label>
-                                    <textarea id="message" name="message" rows="4"
+                                    <textarea name="Notes" rows="4" cols="10" minlength="10" maxlength="500"
+                                        title="Please enter a message between 10 and 500 characters."
                                         class="py-2.5 sm:py-3 px-4 block w-full border border-gray-200 rounded-lg sm:text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"></textarea>
                                 </div>
                             </div>
@@ -552,31 +558,31 @@
 
         form.addEventListener("submit", e => {
             e.preventDefault(); // Prevent the default form submission
-            
+
             statusMessage.textContent = 'Sending...';
             statusMessage.className = 'mt-4 text-sm text-center text-gray-600';
 
             const data = new FormData(form);
-            const action = "https://script.google.com/macros/s/AKfycbxR2kuLgv3pkPzorPEmhCQzojHZHK94FJqg67XHcOFdc8ww8NDQdavhdMjiQRFVur_KBg/exec";
+            const action = "https://script.google.com/macros/s/AKfycbw6dShC_BZcx4WTQ3H5BZ3Q6as7RGgEmcyNzPxqW5fIftHM4rq4KBB08al7JZO12vFh6A/exec";
 
             fetch(action, {
                 method: 'POST',
                 body: data,
             })
-            .then(response => response.json())
-            .then(data => {
-                if (data.result === 'success') {
-                    statusMessage.textContent = 'Success! Your message has been sent.';
-                    statusMessage.className = 'mt-4 text-sm text-center text-green-600';
-                    form.reset(); // Clear the form
-                } else {
-                    throw new Error(data.error || 'Unknown error');
-                }
-            })
-            .catch(error => {
-                statusMessage.textContent = 'Error: ' + error.message;
-                statusMessage.className = 'mt-4 text-sm text-center text-red-600';
-            });
+                .then(response => response.json())
+                .then(data => {
+                    if (data.result === 'success') {
+                        statusMessage.textContent = 'Success! Your message has been sent.';
+                        statusMessage.className = 'mt-4 text-sm text-center text-green-600';
+                        form.reset(); // Clear the form
+                    } else {
+                        throw new Error(data.error || 'Unknown error');
+                    }
+                })
+                .catch(error => {
+                    statusMessage.textContent = 'Error: ' + error.message;
+                    statusMessage.className = 'mt-4 text-sm text-center text-red-600';
+                });
         });
     </script>
 </body>
