@@ -36,11 +36,6 @@
     <meta name="description"
         content="Vivasvana — preservative-free plant-powered nutrition powders, made ethically by village communities.">
 
-    <meta property="og:title" content="The Rock" />
-    <meta property="og:type" content="video.movie" />
-    <meta property="og:url" content="https://www.imdb.com/title/tt0117500/" />
-    <meta property="og:image" content="https://ia.media-imdb.com/images/rock.jpg" />
-
     <style>
         :root {
             --green: #2F855A;
@@ -99,8 +94,10 @@
                 <a href="#about" class="hover:text-[var(--green)]">About</a>
                 <a href="#vision" class="hover:text-[var(--green)]">Vision</a>
                 <a href="#mission" class="hover:text-[var(--green)]">Mission</a>
+                <a href="#contactus" class="hover:text-[var(--green)]">Contact us</a>
                 <a href="#products"
-                    class="px-4 py-2 rounded-md border border-gray-200 bg-[var(--green)] text-white hover:opacity-95" x-show="open">Shop</a>
+                    class="px-4 py-2 rounded-md border border-gray-200 bg-[var(--green)] text-white hover:opacity-95"
+                    x-show="open">Shop</a>
             </nav>
 
             <div class="md:hidden">
@@ -125,8 +122,8 @@
                 <a href="#about" @click="open=false" class="py-2">About</a>
                 <a href="#vision" @click="open=false" class="py-2">Vision</a>
                 <a href="#mission" @click="open=false" class="py-2">Mission</a>
-                <a href="#products" @click="open=false"
-                    class="py-2 text-white bg-[var(--green)] rounded-md text-center" x-show="open">Shop</a>
+                <a href="#products" @click="open=false" class="py-2 text-white bg-[var(--green)] rounded-md text-center"
+                    x-show="open">Shop</a>
             </div>
         </div>
     </header>
@@ -140,10 +137,14 @@
                 <div>
                     <h1 class="text-4xl font-heading font-bold">About The Vivasvana</h1>
                     <p class="mt-4 text-gray-700">
-                        Vivasvana is a plant-based nutrition company. We make clean, natural protein powders from a thoughtful mix of millets, grains, pulses, spices, and other nature-based ingredients. Our goal is simple: give your body honest nutrition while caring for nature and the people who grow with us.
+                        Vivasvana is a plant-based nutrition company. We make clean, natural protein powders from a
+                        thoughtful mix of millets, grains, pulses, spices, and other nature-based ingredients. Our goal
+                        is simple: give your body honest nutrition while caring for nature and the people who grow with
+                        us.
                     </p>
                     <p class="mt-4 text-gray-700">
-                        Nature knows balance. At The Vivasvana, we follow that balance—nourishing your day with plant power, supporting our farmers and artisans, and protecting the earth that feeds us all.
+                        Nature knows balance. At The Vivasvana, we follow that balance—nourishing your day with plant
+                        power, supporting our farmers and artisans, and protecting the earth that feeds us all.
                     </p>
 
                     <!-- <ul class="mt-6 space-y-3">
@@ -181,15 +182,14 @@
 
                     <div class="mt-6">
                         <a href="#mission"
-                            class="inline-flex items-center gap-2 px-4 py-2 rounded-md border border-gray-200">Read Our
+                            class="inline-flex items-center gap-2 px-4 py-2 rounded-md border border-gray-200 text-[var(--green)] font-semibold">Read Our
                             Mission</a>
                     </div>
                 </div>
 
                 <div class="rounded-lg overflow-hidden shadow-lg">
                     <div class="grid grid-cols-1 gap-0 sm:grid-cols-1">
-                        <img src="./images/farm.webp"
-                            alt="ingredients" class="w-full h-48 object-cover" />
+                        <img src="./images/farm.webp" alt="ingredients" class="w-full h-48 object-cover" />
                     </div>
                     <div class="p-6 bg-white">
                         <p class="font-semibold">Tradition meets science</p>
@@ -214,17 +214,25 @@
                     <h2 class="mt-4 text-3xl font-heading font-extrabold leading-tight">Products</h2>
                     <p class="text-sm uppercase tracking-wide font-semibold text-[var(--clay)]">Natural · Vegan ·
                         Gluten-Free</p>
-                    
+
                     <p class="mt-4 text-gray-600 max-w-xl">
-                        Meet The Vivasvana Plant-Based Protein—a simple, trustworthy way to add protein to your day. We start with millets, known for being hardy and naturally nutritious, then balance them with grains and pulses for a fuller amino-acid profile. A small touch of traditional spices adds taste and everyday comfort. Every batch is made small, by trained village producers who follow strict hygiene and quality checks for taste, texture, and consistency.
+                        Meet The Vivasvana Plant-Based Protein—a simple, trustworthy way to add protein to your day. We
+                        start with millets, known for being hardy and naturally nutritious, then balance them with
+                        grains and pulses for a fuller amino-acid profile. A small touch of traditional spices adds
+                        taste and everyday comfort. Every batch is made small, by trained village producers who follow
+                        strict hygiene and quality checks for taste, texture, and consistency.
                     </p>
                     <p class="mt-4 text-gray-600 max-w-xl">
-                        Stir one scoop into water, milk, or plant milk for a quick drink, or fold into smoothies, oats, rotis, dosa/pancakes, or energy balls. Designed with care for people, nature, and local livelihoods, this is plant protein you can feel good about using—clean, familiar, and easy to understand.
+                        Stir one scoop into water, milk, or plant milk for a quick drink, or fold into smoothies, oats,
+                        rotis, dosa/pancakes, or energy balls. Designed with care for people, nature, and local
+                        livelihoods, this is plant protein you can feel good about using—clean, familiar, and easy to
+                        understand.
                     </p>
 
                     <div class="mt-6 flex gap-3">
                         <a href="#products"
-                            class="inline-flex items-center gap-2 px-5 py-3 rounded-md bg-[var(--orange)] text-white font-semibold shadow" x-show="open">Shop
+                            class="inline-flex items-center gap-2 px-5 py-3 rounded-md bg-[var(--orange)] text-white font-semibold shadow"
+                            x-show="open">Shop
                             Products
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
                                 stroke="currentColor">
@@ -251,7 +259,7 @@
                             <small>Pure</small>
                         </div>
                         <div class="flex flex-col items-start">
-                            <span class="font-semibold text-[var(--clay)]">Community</span>
+                            <span class="font-semibold text-[var(--green)]">Community</span>
                             <small>Empowered</small>
                         </div>
                     </div>
@@ -313,8 +321,8 @@
                             Clear ingredients, clear methods.
                         </li>
                         <li class="flex items-start gap-3">
-                            <i data-lucide="heart" title="Care" class="text-(--clay)"></i>
-                            <span class="font-semibold text-[var(--clay)]">Care:</span>
+                            <i data-lucide="heart" title="Care" class="text-(--green)"></i>
+                            <span class="font-semibold text-[var(--green)]">Care:</span>
                             For your health, our teams, and the planet.
                         </li>
                         <li class="flex items-start gap-3">
@@ -323,8 +331,8 @@
                             For traditional foods and local knowledge.
                         </li>
                         <li class="flex items-start gap-3">
-                            <i data-lucide="book-open" title="Learning" class="text-(--clay)"></i>
-                            <span class="font-semibold text-[var(--clay)]">Learning:</span>
+                            <i data-lucide="book-open" title="Learning" class="text-(--green)"></i>
+                            <span class="font-semibold text-[var(--green)]">Learning:</span>
                             We listen, test, and improve.
                         </li>
                         <li class="flex items-start gap-3">
@@ -415,6 +423,75 @@
             </div>
         </section>
 
+        <section id="contactus" class="py-14 ">
+            <!-- Contact Us -->
+            <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+                <div class="max-w-xl mx-auto">
+                    <div class="text-center">
+                        <h1 class="text-3xl font-bold text-gray-800 sm:text-4xl">
+                            Contact us
+                        </h1>
+                    </div>
+                </div>
+
+                <div class="mt-12 max-w-lg mx-auto">
+                    <!-- Card -->
+                    <div class="flex flex-col border border-gray-200 rounded-xl p-4 sm:p-6 lg:p-8 bg-(--white)">
+                        <h2 class="mb-8 text-xl font-semibold text-gray-800">
+                            Fill in the form
+                        </h2>
+
+                        <form id="inquiry-form" >
+                            <div class="grid gap-4 lg:gap-6">
+                                <!-- Grid -->
+                                <div class="grid grid-cols-1 sm:grid-cols-1 gap-4 lg:gap-6">
+                                    <div>
+                                        <label for="name"
+                                            class="block mb-2 text-sm text-gray-700 font-medium">Name</label>
+                                        <input type="text" name="name" id="name"
+                                            class="py-2.5 sm:py-3 px-4 block w-full border border-gray-200 rounded-lg sm:text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none">
+                                    </div>
+                                    
+                                </div>
+                                <!-- End Grid -->
+
+                                <!-- Grid -->
+                                <div class="grid grid-cols-1 sm:grid-cols-1 gap-4 lg:gap-6">
+                                    
+
+                                    <div>
+                                        <label for="phno"
+                                            class="block mb-2 text-sm text-gray-700 font-medium">Phone Number</label>
+                                        <input type="text" name="phno" id="phno"
+                                            class="py-2.5 sm:py-3 px-4 block w-full border border-gray-200 rounded-lg sm:text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none">
+                                    </div>
+                                </div>
+                                <!-- End Grid -->
+
+                                <div>
+                                    <label for="message"
+                                        class="block mb-2 text-sm text-gray-700 font-medium">Message</label>
+                                    <textarea id="message" name="message" rows="4"
+                                        class="py-2.5 sm:py-3 px-4 block w-full border border-gray-200 rounded-lg sm:text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"></textarea>
+                                </div>
+                            </div>
+                            <!-- End Grid -->
+
+                            <div class="mt-6 grid">
+                                <button type="submit"
+                                    class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-[var(--green)] text-white hover:bg-[var(--green)] focus:outline-hidden focus:bg-[var(--green)] disabled:opacity-50 disabled:pointer-events-none">
+                                    Send inquiry
+                                </button>
+                            </div>
+                            <p id="status-message" class="mt-4 text-sm text-center"></p>
+                        </form>
+                    </div>
+                    <!-- End Card -->
+                </div>
+            </div>
+            <!-- End Contact Us -->
+        </section>
+
         <!-- FOOTER -->
         <footer class="bg-gray-50 border-t border-gray-100 py-12">
             <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -468,6 +545,39 @@
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
     <script>
         lucide.createIcons();
+    </script>
+    <script>
+        const form = document.getElementById('inquiry-form');
+        const statusMessage = document.getElementById('status-message');
+
+        form.addEventListener("submit", e => {
+            e.preventDefault(); // Prevent the default form submission
+            
+            statusMessage.textContent = 'Sending...';
+            statusMessage.className = 'mt-4 text-sm text-center text-gray-600';
+
+            const data = new FormData(form);
+            const action = "https://script.google.com/macros/s/AKfycbxR2kuLgv3pkPzorPEmhCQzojHZHK94FJqg67XHcOFdc8ww8NDQdavhdMjiQRFVur_KBg/exec";
+
+            fetch(action, {
+                method: 'POST',
+                body: data,
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.result === 'success') {
+                    statusMessage.textContent = 'Success! Your message has been sent.';
+                    statusMessage.className = 'mt-4 text-sm text-center text-green-600';
+                    form.reset(); // Clear the form
+                } else {
+                    throw new Error(data.error || 'Unknown error');
+                }
+            })
+            .catch(error => {
+                statusMessage.textContent = 'Error: ' + error.message;
+                statusMessage.className = 'mt-4 text-sm text-center text-red-600';
+            });
+        });
     </script>
 </body>
 
