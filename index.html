@@ -58,6 +58,7 @@
             --black: #0F172A;
             --white: #FFFFFF;
             --yellow: #fdb209;
+            --bluebg: #f4fcff;
 
         }
 
@@ -132,7 +133,7 @@
 
     <!-- HERO -->
     <main id="home">
-        <section class="relative overflow-hidden" style="background: #f4fcff;">
+        <section class="relative overflow-hidden bg-(--bluebg)">
             <div class="container mx-auto px-4 py-16 md:py-28 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
 
                 <div class="z-10">
@@ -179,12 +180,12 @@
                 </div>
 
                 <div class="relative">
-                    <div class="hero-overlay rounded-xl p-6">
+                    <div class="rounded-xl p-6">
                         <img src="./images/product1.jpeg" alt="natural powders"
-                            class="w-full rounded-xl shadow-lg object-cover h-96 md:h-[28rem]" />
+                            class="w-full rounded-xl shadow-2xl object-cover h-96 md:h-[28rem]" />
                     </div>
 
-                    <div class="absolute -bottom-6 left-6 bg-white rounded-lg shadow-lg p-4 flex gap-4 items-center">
+                    <div class="absolute -bottom-6 left-12 bg-white rounded-lg shadow-lg p-4 flex gap-4 items-center">
                         <img src="./images/logo.jpeg" alt="producer"
                             class="w-12 h-12 rounded-full object-cover border" />
                         <div>
@@ -269,46 +270,50 @@
         </section>
 
         <!-- VISION -->
-        <section id="vision" class="bg-[var(--yellow)]/30 py-14">
+        <section id="vision" class="bg-[var(--yellow)] text-(--white) text-shadow-sm py-14">
             <div class="container mx-auto px-4">
                 <div class="max-w-3xl mx-auto text-center">
                     <h3 class="text-3xl font-heading font-bold">Vision</h3>
-                    <p class="mt-4 text-gray-700">To become a globally respected wellness brand that delivers
-                        preservative-free, naturally crafted nutrition while empowering rural communities and setting
-                        standards for purity, transparency, and ethical production.</p>
+                    <p class="mt-4">To nourish everyday life—advancing human health, and a regenerative planet through trusted plant-based nutrition.</p>
                 </div>
             </div>
         </section>
 
         <!-- MISSION -->
-        <section id="mission" class="py-14">
+        <section id="mission" class="py-14 bg-(--blue-bg)">
             <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                 <div>
                     <h3 class="text-3xl font-heading font-bold">Mission</h3>
-                    <p class="mt-4 text-gray-700">To offer natural, preservative-free nutrition powders—formulated with
-                        traditional wisdom and modern science. To empower village-based producer groups through fair,
-                        hygienic, and small-batch manufacturing and to uphold the highest standards of clean-label
-                        transparency and ethical sourcing.</p>
-
-                    <ol class="mt-6 space-y-3 text-sm text-gray-600">
-                        <li>• Clean, transparent formulas with short ingredient lists.</li>
-                        <li>• Responsible sourcing and fair partnerships.</li>
-                        <li>• Community livelihoods through sustainable production.</li>
+                    <ol class="mt-6 space-y-3 text-gray-600">
+                        <li>• To offer natural, preservative-free nutrition powders, formulated with both traditional wisdom and modern nutritional science.</li>
+                        <li>• To empower village-based producer groups, promoting inclusive growth through fair, hygienic, and small-batch manufacturing.</li>
+                        <li>• To uphold the highest standards of clean-label transparency, ethical sourcing, and community responsibility in every aspect of the business.</li>
                     </ol>
                 </div>
 
-                <div class="bg-white rounded-xl shadow p-6">
-                    <h4 class="font-semibold">Core Values</h4>
+                <div class="bg-white rounded-xl shadow-sm p-6">
+                    <h4 class="font-semibold">Brand Values</h4>
                     <ul class="mt-4 space-y-3 text-sm text-gray-700">
-                        <li class="flex items-start gap-3"><span
-                                class="font-semibold text-[var(--green)]">Purity:</span> No chemicals, no fillers, no
-                            preservatives.</li>
-                        <li class="flex items-start gap-3"><span
-                                class="font-semibold text-[var(--clay)]">Community:</span> Village-led production &
-                            livelihoods.</li>
-                        <li class="flex items-start gap-3"><span
-                                class="font-semibold text-[var(--orange)]">Transparency:</span> Traceable sourcing &
-                            clear labels.</li>
+                        <li class="flex items-start gap-3">
+                            <span class="font-semibold text-[var(--green)]">Honesty:</span> 
+                                Clear ingredients, clear methods.
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="font-semibold text-[var(--clay)]">Care:</span> 
+                                For your health, our teams, and the planet.
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="font-semibold text-[var(--orange)]">Respect:</span> 
+                            For traditional foods and local knowledge.
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="font-semibold text-[var(--khaki)]">Learning:</span> 
+                            We listen, test, and improve.
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="font-semibold text-[var(--muted)]">Stewardship:</span> 
+                            We leave things better than we found them.
+                        </li>
                     </ul>
 
                     <div class="mt-6">
